@@ -1,0 +1,7 @@
+.welcomePage {
+    padding: 32px;
+}
+
+.welcomePage .ui.card {
+    margin: auto;
+}
