@@ -1,20 +1,17 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import Home from "./Home/home";
+import Profile from "./Profile/profile";
 import "semantic-ui-css/semantic.min.css";
 import "./App.css";
 
 function App() {
     return (
-        <React.Fragment>
-            <link
-                rel="stylesheet"
-                href="//cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
-            />
-            <div className="App">
-                <Home />
-            </div>
-        </React.Fragment>
+        <Router>
+            <Route exact path="/" component={Home} />
+            <Route path="/auth/callback" component={Profile} />
+        </Router>
     );
 }
 
